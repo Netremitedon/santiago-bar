@@ -568,6 +568,10 @@ progress {
 }
 
 .img-fluid {
+  width: 416px;
+  height: 312px;
+}
+.img-fluids {
   max-width: 100%;
   height: auto;
 }
@@ -7415,6 +7419,10 @@ textarea.form-control-lg {
 
 .bg-light {
   background-color: #f8f9fa !important;
+}
+
+.bg-silver {
+  background-color: #3a3b42 !important;
 }
 
 .bg-dark {
