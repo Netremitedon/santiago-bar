@@ -6882,6 +6882,13 @@ textarea.form-control-lg {
   margin-left: 3rem !important;
 }
 
+.mobileflex{
+  max-width: 460px;
+  position:relative;
+  float: left;
+  
+}
+
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
