@@ -53,31 +53,46 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-var slidePosition = 1;
-SlideShow(slidePosition);
 
-// forward/Back controls
-function plusSlides(n) {
-  SlideShow(slidePosition += n);
+const track = document.querySelector('.carousel_track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel_button--right');
+const prevButton = document.querySelector('.carousel_button--left');
+const dotsNav = document.querySelector('.carousel_nav');
+const dots = Array.from(dotsNav.children);
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+
+//arrange the slides next to one another
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
 }
 
-//  images controls
-function currentSlide(n) {
-  SlideShow(slidePosition = n);
+slides.forEach(setSlidePosition);
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
 }
 
-function SlideShow(n) {
-  var i;
-  var slides = document.getElementsByClassName("Containers");
-  var circles = document.getElementsByClassName("dots");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < circles.length; i++) {
-      circles[i].className = circles[i].className.replace(" enable", "");
-  }
-  slides[slidePosition-1].style.display = "block";
-  circles[slidePosition-1].className += " enable";
-} 
+
+// when i click left, move slide to the left
+prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+
+    moveToSlide(track, currentSlide, prevSlide);
+});
+
+
+// when i click right, move slide to the right
+nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+
+    moveToSlide(track, currentSlide, nextSlide);
+});
+
+// when i click nav indicators, move to that slide
