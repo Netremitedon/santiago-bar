@@ -11364,7 +11364,7 @@ p.smallboy{
 .carousel_image {
   width: 100%;
   height: 100%;
-  object-fit:contain;
+  object-fit:cover;
 }
 
 .carousel_track-container {
@@ -11401,10 +11401,18 @@ p.smallboy{
 
 .carousel_button--left {
   left: -50px;
+  padding-right: var(--bs-gutter-x, 0.75rem)auto;
+  padding-left: var(--bs-gutter-x, 0.75rem)auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .carousel_button--right {
   right: -50px;
+  padding-right: var(--bs-gutter-x, 0.75rem)auto;
+  padding-left: var(--bs-gutter-x, 0.75rem)auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .carousel_button img {
