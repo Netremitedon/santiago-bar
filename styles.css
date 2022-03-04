@@ -11356,7 +11356,7 @@ p.smallboy{
 
 .CAR{
   position: relative;
-  height: 600px ;
+  height: 400px ;
   width: 80% ;
   margin: 0 auto;
 }
@@ -11364,12 +11364,12 @@ p.smallboy{
 .carousel_image {
   max-width: 100%;
   height: auto;
-  object-fit:var(--bs-aspect-ratio)
+  object-fit:cover;
 }
 
 .carousel_track-container {
-  background: transparent;
-  height: 100%;
+  background: pink;
+  height:100%;
   position: relative;
   overflow: hidden;
 }
@@ -11392,9 +11392,8 @@ p.smallboy{
 
 .carousel_button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
+  top:50%;
+  background: pink;
   border: 0;
   cursor: pointer;
 }
@@ -11403,16 +11402,12 @@ p.smallboy{
   left: -50px;
   padding-right: var(--bs-gutter-x, 0.75rem)auto;
   padding-left: var(--bs-gutter-x, 0.75rem)auto;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .carousel_button--right {
   right: -50px;
   padding-right: var(--bs-gutter-x, 0.75rem)auto;
   padding-left: var(--bs-gutter-x, 0.75rem)auto;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .carousel_button img {
