@@ -11356,7 +11356,7 @@ p.smallboy{
 
 .CAR{
   position: relative;
-  height: 400px ;
+  height: 600px ;
   width: 80% ;
   margin: 0 auto;
 }
@@ -11365,6 +11365,12 @@ p.smallboy{
   max-width: 100%;
   height: auto;
   object-fit:cover;
+}
+
+@media (min-height: 400px) {
+  .carousel_track-container {
+    max-height: 440px;
+  }
 }
 
 .carousel_track-container {
@@ -11399,13 +11405,13 @@ p.smallboy{
 }
 
 .carousel_button--left {
-  left: -50px;
+  left: -12%;
   padding-right: var(--bs-gutter-x, 0.75rem)auto;
   padding-left: var(--bs-gutter-x, 0.75rem)auto;
 }
 
 .carousel_button--right {
-  right: -50px;
+  right: -12%;
   padding-right: var(--bs-gutter-x, 0.75rem)auto;
   padding-left: var(--bs-gutter-x, 0.75rem)auto;
 }
@@ -11434,5 +11440,3 @@ p.smallboy{
 .carousel_indicator.current-slide {
   background: rgba(0,0,0,.75);
 }
-
-.is-hidden { display: none;}
