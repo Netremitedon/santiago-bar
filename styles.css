@@ -56,7 +56,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #F9F8F8;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -573,7 +573,7 @@ progress {
 }
 .img-fluids {
   max-width: 100%;
-  height: auto;
+  max-height: 30%;
 }
 
 .img-thumbnail {
@@ -11356,8 +11356,8 @@ p.smallboy{
 
 .CAR{
   position: relative;
-  background: pink;
-  height: 600px ;
+  
+  height: 400px;
   width: 80% ;
   margin: 0 auto;
 }
@@ -11365,7 +11365,7 @@ p.smallboy{
 .carousel_image {
   width: 100%;
   height: 100%;
-  object-fit:fill;
+  object-fit:contain;
 }
 
 .carousel_track-container {
@@ -11374,6 +11374,7 @@ p.smallboy{
   max-width:100%;
   position: relative;
   overflow: hidden;
+  
 }
 
 .carousel_track {
@@ -11381,7 +11382,7 @@ p.smallboy{
   margin: 0;
   list-style: none;
   position: relative;
-  height: 100%;
+  height:100%; 
   transition: transform 250ms ease-in;
 }
 
@@ -11484,3 +11485,42 @@ div.desc {
   display: table;
   clear: both;
 }
+
+
+.box2 {
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  width: 70%
+
+}
+
+#test1 
+{ 
+  
+	width:40%; 
+	height:10%; 
+	background-color:rgba(0,0,0,.5);
+  
+	word-wrap: break-word; /* words won't go from the boundry */ 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	/* top, left, bottom*/ 
+	
+	float:none; 
+} 
+#test2
+{ 
+  
+	width:50%; 
+	height:10%; 
+	background-color:rgba(0,0,0,.5);
+  
+	word-wrap: break-word; /* words won't go from the boundry */ 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	/* top, left, bottom*/ 
+	
+	float:none; 
+} 
